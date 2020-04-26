@@ -14,14 +14,13 @@ Setting up a new developer machine can be **ad-hoc**, **manual**, and **time-con
 
 ## What's in the box?
 
-Setup and config for bash, curl, git, node, ruby, tmux, vim, brew, apps, dev environments and more — there's a lot to list so please see the full [Package Contents](docs/package-contents.md).
+Setup and config for bash, curl, git, node, ruby, vim, brew, apps, dev environments and more — there's a lot to list so please see the full [Package Contents](docs/package-contents.md).
 
 ### Highlights
 
 - **Xcode Command Line Tools** with automated install.
 - **Awesome bash setup**: [aliases](bash/.aliases), [functions](bash/.functions), [z](https://github.com/rupa/z), smart prompt, tab completion and more.
 - **Git done right**: [aliases](git/.gitconfig), [hub](https://hub.github.com), [git-friendly](https://github.com/jamiew/git-friendly) and custom scripts.
-- **tmux to the max** using [config](tmux/.tmux.conf) and shortcuts.
 - **Vim for the win** via [vim-pathogen](https://github.com/tpope/vim-pathogen), [vim-sensible](https://github.com/tpope/vim-sensible) and other plugins.
 - **Homebrew package manager** to install tools, applications and fonts.
 - **Must-have tools**: GNU core utils, gnupg, [quick look plugins](https://github.com/sindresorhus/quick-look-plugins), [wifi-password](https://github.com/rauchg/wifi-password), etc.
@@ -30,7 +29,7 @@ Setup and config for bash, curl, git, node, ruby, tmux, vim, brew, apps, dev env
 - **Developer apps**: iTerm2, Framer, Sketch, Slack, Sublime, etc.
 - **Node development** using [n](https://github.com/tj/n) with global package installer.
 - **Ruby development** using [rbenv](https://github.com/rbenv/rbenv) and [ruby-build](https://github.com/rbenv/ruby-build).
-- **Goodies in [bin](bin)** including git and tmux tools.
+- **Goodies in [bin](bin)** including git
 
 Also, last but not least:
 
@@ -68,7 +67,6 @@ To keep the project organised all files are split into directories and grouped a
 - **`setup`** — install, migrate and backup scripts
 - **`shell`** — general shell config
 - **`terminal`** — terminal themes
-- **`tmux`** — tmux config
 - **`vim`** — vim config
 - **`wget`** — wget config
 - **`/`** — project files and setup script
@@ -295,10 +293,6 @@ Customise your Git config by creating a `~/.gitconfig.local` file which will ext
 ### Customising Vim
 
 Customise your Vim config by creating a `~/.vimrc.local` file which will extend [`.vimrc`](vim/.vimrc).
-
-### Customising tmux
-
-Customise your tmux config by creating a `~/.tmux.conf.local` file which will extend [`.tmux.conf`](tmux/.tmux.conf).
 
 ## Fork
 

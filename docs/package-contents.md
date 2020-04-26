@@ -59,11 +59,6 @@ Bash 4 and auto-completion
 
 - Solarized Dark Theme (256 colours)
 
-### tmux
-
-- `.tmux.conf` — tmux config
-- `reattach-to-user-namespace` — macOS clipboard access
-
 ### Vim
 
 - `.vimrc` — vim config with backups, swaps and undo
@@ -104,7 +99,6 @@ Bash 4 and auto-completion
 - `openssh`
 - `screen`
 - `git`
-- `tmux`
 - `z`
 
 ### Other useful utils
@@ -328,10 +322,6 @@ Installed using `mas`:
 - `ports`
 - `rebase-authors`
 - `release-tag`
-- `tmux-ps`
-- `tmux-session`
-- `tmux-switch-session`
-- `tmux-vim-select-pane`
 
 ## Mac OS
 

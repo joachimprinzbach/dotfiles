@@ -28,7 +28,6 @@ declare -a dotfilesfilearray=(
   "$dotfilesdir/ruby"
   "$dotfilesdir/screen"
   "$dotfilesdir/shell"
-  "$dotfilesdir/tmux"
   "$dotfilesdir/vim"
   "$dotfilesdir/wget"
 )

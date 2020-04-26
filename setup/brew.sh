@@ -91,7 +91,6 @@ if $brewinstall; then
 
   # Key tools.
   brew install git
-  brew install tmux
   brew install z
 
   # OTHER USEFUL UTILS
