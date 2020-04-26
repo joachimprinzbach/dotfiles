@@ -196,12 +196,6 @@
   changed = green
   untracked = cyan
 
-[commit]
-  # https://help.github.com/articles/signing-commits-using-gpg/
-  gpgsign = true
-
-	template = ~/.git-template-commit
-
 [diff]
   tool = Kaleidoscope
 
@@ -281,3 +275,6 @@
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
   required = true
+[user]
+	name = Joachim Prinzbach
+	email = joachim.prinzbach@gmail.com
