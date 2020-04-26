@@ -96,50 +96,26 @@ if $brewinstall; then
   # OTHER USEFUL UTILS
   brew install advancecomp
   brew install brew-cask-completion
-  brew install cloc
-  brew install cmake
-  brew install diff-so-fancy
-  brew install fzf
-  brew install gibo && gibo -l
   brew install gifsicle
   brew install git-extras
   brew install git-lfs
   brew install grc
   brew install httpie
   brew install hub
-  brew install icdiff
-  brew install imagemagick --with-webp
-  brew install jhead
   brew install jp2a
   brew install jpegoptim
   brew install jq
   brew install libgit2
   brew install mas
-  brew install mtr
-  brew install ngrep
-  brew install nmap
-  brew install optipng
   brew install p7zip
   brew install pidof
   brew install pigz
-  brew install pngcrush
-  brew install pngquant
-  brew install pv
   brew install readline
-  brew install reattach-to-user-namespace
   brew install rename
-  brew install roundup
-  brew install spaceman-diff
-  brew install spark
-  brew install speedtest-cli
-  brew install ssh-copy-id
-  brew install terminal-notifier
-  brew install the_silver_searcher
   brew install trash-cli
   brew install tree
   brew install ttygif
   brew install unrar
-  brew install vbindiff
   brew install wifi-password
   brew install youtube-dl
   brew install zopfli
@@ -191,10 +167,11 @@ if $brewinstall; then
   running "Installing cask apps"
 
   # APPLICATIONS
-  brew tap caskroom/cask
   brew tap caskroom/versions
 
   # General
+  brew cask install adoptopenjdk
+  brew cask install adoptopenjdk8
   brew cask install discord
   brew cask install diskwave
   brew cask install dropbox
@@ -219,30 +196,10 @@ if $brewinstall; then
   # brew cask install sublime-text
   brew cask install visual-studio-code
 
-  # VM
-  # brew cask install virtualbox
-  # brew cask install vagrant
-
-  # Quicklook
-  #brew cask install qlcolorcode
-  #brew cask install qlstephen
-  #brew cask install qlmarkdown
-  #brew cask install quicklook-json
-  #brew cask install qlprettypatch
-  #brew cask install quicklook-csv
-  # brew cask install betterzipql
-  # brew cask install qlimagesize
-  #brew cask install webpquicklook
-  #brew cask install suspicious-package
-  #brew cask install quicklookase
-  #brew cask install qlvideo
 
   # Install Mac App Store Applications.
   # requires: brew install mas
-  mas install 1254981365 # Contrast
-  mas install 1234952668 # FlagTimes
-  mas install 1225570693 # Ulysses
-  # TODO: install pixelsnap
+  # mas install 1225570693 # Ulysses
 
   running "brew cleanup"
   # Remove outdated versions from the cellar.
