@@ -42,35 +42,8 @@ if hash n 2>/dev/null; then
 
   packages=(
     create-react-app
-    caniuse-cmd
-    doctoc
-    eslint
-    git-open
-    git-recent
-    gulp-cli
-    gzip-size-cli
-    http-server
-    imageoptim-cli
-    imgur-uploader-cli
-    is-up-cli
-    lighthouse
-    moro
-    npm-check
-    npm-home
-    npm-name-cli
-    pageres-cli
+    @angular/cli
     prettier
-    remote-share-cli
-    serve
-    source-map-explorer
-    speed-test
-    stylelint
-    stylelint-config-standard
-    surge
-    svgo
-    trash-cli
-    viewport-list-cli
-    vtop
     @vue/cli
   )
 

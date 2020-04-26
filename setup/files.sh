@@ -20,7 +20,6 @@ declare -a dotfilesdirarray=(
 
 # Declare array of directories we want to symlink files from.
 declare -a dotfilesfilearray=(
-  "$dotfilesdir/ack"
   "$dotfilesdir/bash"
   "$dotfilesdir/curl"
   "$dotfilesdir/editor"

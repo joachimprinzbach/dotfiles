@@ -95,7 +95,6 @@ if $brewinstall; then
   brew install z
 
   # OTHER USEFUL UTILS
-  brew install ack
   brew install advancecomp
   brew install brew-cask-completion
   brew install cloc
@@ -146,36 +145,43 @@ if $brewinstall; then
   brew install youtube-dl
   brew install zopfli
 
-  # DEVELOPMENT
+
+  # Docker
+  brew install docker
+  brew install docker-compose
+  brew install docker-machine-driver-xhyve
+  brew install xhyve
+
+  # Dev
   brew install n
   brew install yarn
   brew install go
-  brew install homebrew/php/php56 --with-gmp
+  brew install node
   brew install pyenv
   brew install pyenv-virtualenv
   brew install rbenv
   brew install ruby-build
   brew install rbenv-gemset
 
-  # DATABASES
-  brew install postgresql
-  #brew install elasticsearch
-  #brew install mariadb
-  brew install mongodb
-  brew install mysql@5.7
-  brew install redis
-
-  # DEVOPS
-  brew install awscli
-  brew install heroku
-  brew install nginx
-  brew install puma/puma/puma-dev
-  brew install docker
-  # brew install docker-compose
-  # brew install docker-machine
-  # brew install xhyve
-  # brew install docker-machine-driver-xhyve
-  # brew install boot2docker
+  # Dev CLI's
+  brew tap argoproj/tap
+  brew tap kong/kong
+  brew tap pivotal/tap
+  brew tap solo-io/tap
+  brew tap tektoncd/tools
+  brew install solo-io/tap/glooctl
+  brew install helm
+  brew install istioctl
+  brew install jenkins
+  brew install kong/kong/kong
+  brew install kubernetes-cli
+  brew install kubeseal
+  brew install maven
+  brew install minio/stable/mc
+  brew install openshift-cli
+  brew install pivotal/tap/springboot
+  brew install tektoncd/tools/tektoncd-cli
+  brew install travis
 
   # NET UTILS
   brew tap ZloeSabo/homebrew-nettools
@@ -183,111 +189,54 @@ if $brewinstall; then
   brew install httplab
   brew install wuzz
 
-  # pngout
-  brew tap jonof/kenutils
-
-  brew install/pngout
-
-  # WEBFONT TOOLS
-  running "Installing webfont tools"
-
-  brew tap bramstein/webfonttools
-
-  brew install sfnt2woff
-  brew install sfnt2woff-zopfli
-  brew install woff2
-
-  # FONTS
-  running "Installing fonts"
-
-  brew tap caskroom/fonts
-
-  brew cask install font-domine
-  brew cask install font-droid-sans
-  brew cask install font-droid-sans-mono
-  brew cask install font-fira-code
-  brew cask install font-fira-sans
-  brew cask install font-fontawesome
-  brew cask install font-inconsolata
-  brew cask install font-lato
-  brew cask install font-open-sans
-  brew cask install font-roboto
-  brew cask install font-source-code-pro
-  brew cask install font-source-sans-pro
-  brew cask install font-ubuntu
-
   running "Installing cask apps"
 
   # APPLICATIONS
   brew tap caskroom/cask
   brew tap caskroom/versions
 
-  # Security
-  brew cask install dashlane
-  brew cask install keybase
-  brew cask install gpgtools
-  brew cask install tunnelblick
-
   # General
-  brew cask install caffeine
   brew cask install discord
   brew cask install diskwave
   brew cask install dropbox
-  brew cask install firefox
   brew cask install google-chrome
-  brew cask install grammarly
   brew cask install iterm2
   brew cask install licecap
   brew cask install macdown
   brew cask install oversight
-  brew cask install rocket
+  brew cask install postman
+  brew cask install skype
+  brew cask install skype-for-business
   brew cask install slack
-  brew cask install slite
-  brew cask install spectacle
+  brew cask install sonos
   brew cask install spotify
+  brew cask install teamviewer
   brew cask install vlc
   brew cask install zoomus
 
-  # Design
-  brew cask install abstract
-  brew cask install fontbase
-  brew cask install framer
-  brew cask install iconjar
-  brew cask install sketch
-  brew cask install zeplin
-
   # Development
-  brew cask install dash
-  brew cask install google-chrome-canary
-  brew cask install graphiql
-  brew cask install imagealpha
-  brew cask install imageoptim
+  brew cask install intellij-idea
   brew cask install ngrok
-  brew cask install sequel-pro
   # brew cask install sublime-text
   brew cask install visual-studio-code
-
-  # DevOps
-  brew cask install aws-vault
-  brew cask install sequel-pro
 
   # VM
   # brew cask install virtualbox
   # brew cask install vagrant
 
   # Quicklook
-  brew cask install qlcolorcode
-  brew cask install qlstephen
-  brew cask install qlmarkdown
-  brew cask install quicklook-json
-  brew cask install qlprettypatch
-  brew cask install quicklook-csv
+  #brew cask install qlcolorcode
+  #brew cask install qlstephen
+  #brew cask install qlmarkdown
+  #brew cask install quicklook-json
+  #brew cask install qlprettypatch
+  #brew cask install quicklook-csv
   # brew cask install betterzipql
   # brew cask install qlimagesize
-  brew cask install webpquicklook
-  brew cask install suspicious-package
-  brew cask install quicklookase
-  brew cask install qlvideo
+  #brew cask install webpquicklook
+  #brew cask install suspicious-package
+  #brew cask install quicklookase
+  #brew cask install qlvideo
 
   # Install Mac App Store Applications.
   # requires: brew install mas
@@ -300,6 +249,6 @@ if $brewinstall; then
   # Remove outdated versions from the cellar.
   brew cleanup
 
-  # turn off prevent sleep.
+  # turn off prevebrent sleep.
   killall caffeinate
 fi;

@@ -16,14 +16,8 @@ alias dls="cd $HOME/Downloads"
 alias dotfiles="cd $HOME/dotfiles"
 alias dtop="cd $HOME/Desktop"
 alias lib="cd $HOME/Library"
-alias work="cd $HOME/Work"
-alias repos="cd $HOME/repos"
+alias repos="cd $HOME/IdeaProjects"
 alias proj="cd $HOME/projects"
-alias code="cd $HOME/code"
-alias dwork="cd $HOME/Dropbox/Work"
-alias drepos="cd $HOME/Dropbox/repos"
-alias dcode="cd $HOME/Dropbox/code"
-alias dproj="cd $HOME/Dropbox/projects"
 
 alias g="git"
 alias v="vim"
@@ -85,9 +79,6 @@ alias fsq="stat -f \"%z bytes\""
 # Hosts
 alias hosts='sudo $EDITOR /etc/hosts'
 
-# Get week number
-alias week='date +%V'
-
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 alias update='\
   sudo softwareupdate -i -a; \
@@ -104,15 +95,11 @@ alias update='\
 
 # Google Chrome
 alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
-alias canary='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 #alias localip="ipconfig getifaddr en0"
 alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
-
-# wget sucks with certificates. Let's keep it simple.
-#alias wget="curl -O"
 
 # Show active network interfaces
 alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'"
@@ -126,11 +113,6 @@ alias flushdns="killall -HUP mDNSResponder"
 
 # Clean up LaunchServices to remove duplicates in the “Open With” menu
 alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
-
-# Misc.
-alias weather="curl -4 http://wttr.in/$1"
-alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
-alias bell="tput bel" # ring terminal bell
 
 # Canonical hex dump; some systems have this symlinked
 command -v hd > /dev/null || alias hd="hexdump -C"
@@ -175,10 +157,6 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 # URL-encode strings
 # alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
 
-# Merge PDF files
-# Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
-# alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
-
 # Disable Spotlight
 alias spotoff="sudo mdutil -a -i off"
 # Enable Spotlight
@@ -204,28 +182,7 @@ done
 alias ni="npm install"
 alias npmg="npm list -g --depth=0 2>/dev/null"
 alias npml="npm list --depth=0 2>/dev/null"
-
 alias npmrns="npm rebuild node-sass --force"
-
-# Make Grunt print stack traces by default
-command -v grunt > /dev/null && alias grunt="grunt --stack"
-
-# Rails
-alias be="bundle exec "
-alias bi="bundle install"
-alias rc="bundle exec rails c"
-alias rlogs="less log/development.log"
-alias rdbm="be rake db:migrate && rdbmt"
-alias rdbmd="be rake data:migrate"
-alias rdbmt="RAILS_ENV=test be rake db:migrate"
-
-# Vagrant
-alias vg="vagrant global-status"
-alias vgup="vagrant up"
-alias vghalt="vagrant halt"
-alias vgssh="vagrant ssh"
-alias vgreload="vagrant reload"
-alias vgrebuild="vagrant destroy --force && vagrant up"
 
 # Stuff I never really use but cannot delete either because of http://xkcd.com/530/
 alias stfu="osascript -e 'set volume output muted true'"
