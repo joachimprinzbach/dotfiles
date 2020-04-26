@@ -35,7 +35,6 @@ Setup and config for bash, curl, git, node, ruby, tmux, vim, brew, apps, dev env
 Also, last but not least:
 
 - **[Setup scripts](#setup)** to manage backup, install, config and symlinking (plus [migration](#migration)).
-- **Mackup** to [backup and restore](#mackup-for-backup) app settings and personal files.
 - **OS X defaults** geared towards developers.
 
 Sounds good? Let's go.
@@ -63,8 +62,6 @@ To keep the project organised all files are split into directories and grouped a
 - **`editor`** — editor config (including linters)
 - **`git`** — git config, attributes and ignore files
 - **`iterm2`** — iterm2 themes
-- **`mackup`** — config to backup app settings and personal files
-- **`.mackup`** — `.cfg` files for custom apps, symlinked to `~/.mackup`
 - **`macos`** — macOS prefs
 - **`node`** — node config
 - **`ruby`** — ruby config
@@ -121,12 +118,8 @@ Setup consists of six steps:
 5. [Create **symlinks** for directories and files](#step-5-symlinks)
 6. [Final touches](#step-6-final-touches)
 
-### Step 1: Backup
-
-> This step runs the [`setup/backup.sh`](setup/backup.sh) script.
-
-Creates `~/backup/dotfiles-backup` then takes a copy of all files on the current system which would be replaced by the setup script (as defined [here](docs/backup.md)) — it also backs up some other useful local directories and files.
-
+### Step 1: Backup (not needed) 
+ 
 ### Step 2: Directories
 
 > This step runs the [`setup/directories.sh`](setup/directories.sh) script.
@@ -371,60 +364,6 @@ $ cd ~/dotfiles/macos && ./.macos
 ```
 
 *If in any doubt, don't run this script, rather configure what you can manually.*
-
-### Mackup for backup
-
-[Mackup](https://github.com/lra/mackup) is a fantastic tool that allows you to: backup personal application settings and private data; sync that data between computers; and then easily restore your configuration to a fresh install — all in a simple command line interface. Seems good!
-
-While by no means a comprehensive backup solution, Mackup keeps things simple, currently supports [over 360 applications](https://github.com/lra/mackup/mackup/applications) and can store data on Dropbox, Google Drive, iCloud or any path you can copy to.
-
-#### How I use Mackup
-
-I store on Dropbox and explicitly declare which apps to sync and which to ignore — anything handled by my dotfiles is ignored (bash, git, vim etc.)
-
-I backup a wide range of other applications including those containing credentials such as aws, gnupg and ssh. I also backup apps not natively supported using custom `.cfg` files. For example, to backup [Ulysses](https://ulyssesapp.com) (an amazing markdown writing app) I created a `~/.mackup` directory and placed a `ulysses.cfg` file inside:
-
-```ini
-[application]
-name = Ulysses
-
-[configuration_files]
-Library/Preferences/com.soulmen.ulysses3.plist
-Library/Preferences/com.ulyssesapp.mac.plist
-```
-
-It is usually straight-forward to find which `.plist` files in `Library/Preferences` you'll need to list, they always feature the application name.
-
-Taking that a step further we can also declare a "personal files" application using a `personal-files.cfg` and then cherry pick any other files we want to backup while keeping them out of a public repo:
-
-```ini
-[application]
-name = Personal Files
-
-[configuration_files]
-.gitconfig.local
-.extra
-```
-
-When I declare this in my main [`.mackup.cfg`](mackup/.mackup.cfg) they are handled with ease:
-
-```ini
-[storage]
-engine = dropbox
-directory = mackup
-
-# Apps to sync — if empty, syncs all supported.
-# custom: personal-files, break, grammarly, iconjar, iterm2, oversight, ulysses
-[applications_to_sync]
-personal-files
-aws
-...
-ulysses
-```
-
-A simple `$ mackup backup` saves everything to Dropbox and I can later `$ mackup restore` on a fresh install to get these settings back (you can also easily `$ mackup uninstall`).
-
-These dotfiles symlink my Mackup config into `~/` — take a look :eyes:.
 
 ### Migration
 

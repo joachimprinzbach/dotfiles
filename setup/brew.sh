@@ -146,9 +146,6 @@ if $brewinstall; then
   brew install youtube-dl
   brew install zopfli
 
-  # BACKUP
-  brew install mackup
-
   # DEVELOPMENT
   brew install n
   brew install yarn

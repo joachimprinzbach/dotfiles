@@ -156,10 +156,6 @@ Bash 4 and auto-completion
 - `youtube-dl`
 - `zopfli`
 
-### Backup tools
-
-- `mackup`
-
 ### Development tools
 
 - `yarn`
@@ -345,9 +341,3 @@ Installed using `mas`:
 
 - [Mac OS X sensible defaults](../README.md#sensible-mac-os-x-defaults)
 - [Quick Look plugins](#quicklook-plugins)
-
-## Mackup
-
-- [Mackup for backup](../README.md#mackup-for-backup)
-- `.mackup.cfg` — mackup config
-- `/.mackup` — individual app config for mackup

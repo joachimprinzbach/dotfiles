@@ -127,6 +127,4 @@ source ./setup/misc.sh
 botintro "\e[1mFINISHED\e[0m -- That's it for the automated process."
 bot "If you want to do more, take a look at the Going Further section:"
 bot "https://github.com/aaronbates/dotfiles#going-further"
-
-echo -e "\np.s. don't forget to sync your dropbox and get mackup running.\n"
 # EOF
