@@ -6,7 +6,6 @@
 # Idempotent setup script for dotfiles:
 
 # Prep
-# 1. Backup
 # 2. Directories
 # 3. Xcode CLI
 # 4. Homebrew
@@ -73,12 +72,6 @@ source ./setup/files.sh
 # Install all available macos updates.
 #action "Installing Mac updates:\n"
 #sudo softwareupdate -ia
-
-# ---------
-# 1. Backup
-# ---------
-botintro "\e[1mSTEP 2: BACKUP\e[0m"
-source ./setup/backup.sh
 
 # --------------
 # 2. Directories

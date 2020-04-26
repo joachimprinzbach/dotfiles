@@ -18,6 +18,8 @@ venv
 node_modules
 .sass-cache
 npm-debug.log
+.idea
+**.iml
 
 # dotfiles
 bin/branch
